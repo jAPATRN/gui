@@ -1,0 +1,24 @@
+package Desafios;
+import java.util.Scanner;
+public class Desafio02Teste {
+	
+	public static void main(String[] args) {
+		
+	
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Digite sua altura em metros: ");
+		double altura = scanner.nextDouble();
+		
+		scanner.nextLine();
+		
+		System.out.println("Digite F para Feminino ou M para Masculino: ");
+		String sexo = scanner.nextLine();
+		
+		double pesoideal = (sexo.equalsIgnoreCase("M"))? 72.7 * altura-58 : (sexo.equalsIgnoreCase("F"))? 62.1 * altura -44.7 : 0;
+		
+		System.out.println("Peso ideal: "+pesoideal);
+		
+		scanner.close();
+	}
+}
