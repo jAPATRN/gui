@@ -1,0 +1,50 @@
+package Desafios;
+import java.util.Scanner;
+public class Desafio03 {
+
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.println("Digite um número: ");
+		double num1 = scanner.nextInt();
+		
+		System.out.println("Digite outro número: ");
+		double num2 = scanner.nextInt();
+		
+		scanner.nextLine();
+		
+		System.out.println("Digite uma das opções: (A) - Adicao | (B) - Subtracao | (C) - Divisao | (D) - Multiplicacao");
+		
+		String letra = scanner.nextLine().toUpperCase();
+		
+		double resultado;
+		
+		switch (letra) {
+		case "A":
+			resultado = num1 + num2;
+			System.out.print("Resultado da operação: "+resultado);
+			break;
+		
+		case "B":
+			resultado = num1 - num2;
+			System.out.print("Resultado da operação: "+resultado);
+			break;
+			
+		case "C":
+			resultado = num1 / num2;
+			System.out.print("Resultado da operação: "+resultado);
+			break;
+			
+		case "D":
+			resultado = num1 * num2;
+			System.out.print("Resultado da operação: "+resultado);
+			break;
+			
+		default:
+			System.out.print("Operador não reconhecido");
+			break;	
+		}
+		scanner.close();
+	}
+}
